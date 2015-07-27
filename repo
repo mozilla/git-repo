@@ -2,8 +2,9 @@
 
 ## repo default configuration
 ##
-REPO_URL = 'https://gerrit.googlesource.com/git-repo'
-REPO_REV = 'stable'
+# use the mozilla fork, master branch has fix for git ssh urls
+REPO_URL = 'https://github.com/mozilla/git-repo'
+REPO_REV = 'master'
 
 # Copyright (C) 2008 Google Inc.
 #
