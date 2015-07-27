@@ -89,6 +89,9 @@ class _XmlRemote(object):
     # We handle no scheme by replacing it with an obscure protocol, gopher
     # and then replacing it with the original when we are done.
 
+    # support github repo
+    if url.find('git@github.com') == 0:
+      return url
     if manifestUrl.find(':') != manifestUrl.find('/') - 1:
       url = urllib.parse.urljoin('gopher://' + manifestUrl, url)
       url = re.sub(r'^gopher://', '', url)
